@@ -25,7 +25,7 @@ module API
       end
 
       def digsite_info_params
-        params.require(:excavator_info).require(:digsite_info).permit(:well_known_text)
+        params.require(:excavation_info).require(:digsite_info).permit(:well_known_text)
       end
 
       def date_times_params
