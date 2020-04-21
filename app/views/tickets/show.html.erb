@@ -1,0 +1,11 @@
+<div id="map">
+</div>
+
+<% present @ticket do |t| %>
+  <script>
+      document.addEventListener("turbolinks:load", function () {
+          initMap(<%= t.polygon %>)
+      });
+  </script>
+<% end %>
+
