@@ -9,9 +9,9 @@ default: &default
 
 development:
   <<: *default
-  database: traktors_development
+  database: tickets_development
 
 test:
   <<: *default
-  database: traktors_test
+  database: ttickets_test
 
