@@ -26,15 +26,15 @@ ActiveRecord::Schema.define(version: 2020_04_19_153605) do
     t.string "company_name"
     t.string "address"
     t.boolean "crew_onsite", default: false
-    t.bigint "ticket_id", null: false
+    t.bigint "ticket_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ticket_id"], name: "index_excavators_on_ticket_id"
   end
 
   create_table "service_areas", force: :cascade do |t|
-    t.bigint "ticket_id", null: false
-    t.bigint "area_code_id", null: false
+    t.bigint "ticket_id"
+    t.bigint "area_code_id"
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -53,4 +53,7 @@ ActiveRecord::Schema.define(version: 2020_04_19_153605) do
     t.index ["request_number"], name: "index_tickets_on_request_number", unique: true
   end
 
+  add_foreign_key "excavators", "tickets"
+  add_foreign_key "service_areas", "area_codes"
+  add_foreign_key "service_areas", "tickets"
 end

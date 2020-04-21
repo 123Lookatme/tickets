@@ -17,9 +17,13 @@ end
 #  crew_onsite  :boolean          default(FALSE)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  ticket_id    :bigint           not null
+#  ticket_id    :bigint
 #
 # Indexes
 #
 #  index_excavators_on_ticket_id  (ticket_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (ticket_id => tickets.id)
 #
