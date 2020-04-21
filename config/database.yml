@@ -13,5 +13,5 @@ development:
 
 test:
   <<: *default
-  database: ttickets_test
+  database: tickets_test
 
