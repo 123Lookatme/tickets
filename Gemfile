@@ -7,7 +7,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'kaminari'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'validates_timeliness', '~> 5.0.0.alpha3'
